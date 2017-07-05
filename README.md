@@ -49,6 +49,6 @@ Steps for executing :
 
 		http://localhost:8000/
 			
-		The default CodeIgniter landing page would be display which shows that everything is setup perfectly.
+   The default CodeIgniter landing page would be display which shows that everything is setup perfectly.
 
 
