@@ -9,7 +9,7 @@ Steps for executing :
 	
 	**ciapp directory has the CodeIgniter 3.1 source code**
    
-  For services => db & services => ciapp, change the path of the volumes directory according to your set up.
+   For services => db & services => ciapp, change the path of the volumes directory according to your set up.
 
 
 2. Change the MySQL environment variables in docker-compose.yml file if required.
