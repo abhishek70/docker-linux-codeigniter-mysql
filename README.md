@@ -53,3 +53,8 @@ Steps for executing :
    The default CodeIgniter landing page would be display which shows that everything is setup perfectly.
 
 
+References :
+
+1. https://codeigniter.com/
+2. https://hub.docker.com/_/php/
+3. https://docs.docker.com/
