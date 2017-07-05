@@ -6,6 +6,7 @@ Steps for executing :
 1. After downloading/cloning the repository, open the docker-compose.yml file in the and change the following parameters.
 
 	*db_data directory will store the MySQL data*
+	
 	*ciapp directory has the CodeIgniter 3.1 source code*
    
   For services => db & services => ciapp, change the path of the volumes directory according to your set up.
