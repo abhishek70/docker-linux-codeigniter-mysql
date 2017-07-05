@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  db:
+    image: mysql/mysql-server:latest
+    volumes: 
+      - /path/to/directory/db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: ciapp
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+
+  ciapp:
+    build: ./ciapp
+    volumes: 
+      - /path/to/directory/ciapp:/var/www/html/
+    depends_on:
+       - db
+    restart: always
+    links:
+      - db:mysql
+    ports:
+      - "8000:80"
+
+volumes:
+    db_data:
