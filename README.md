@@ -31,20 +31,19 @@ Steps for executing :
 
 	 Replace CONTAINER-ID with the container Id of the MySQL that would be available from the command in step 5. After running the above command it would ask for the root password which is set in the docker-compose.yml file in environment variables.
 
-	 	<pre>
-	 		CREATE TABLE IF NOT EXISTS `ci_sessions` (
-        `id` varchar(128) NOT NULL,
-        `ip_address` varchar(45) NOT NULL,
-        `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
-        `data` blob NOT NULL,
-        KEY `ci_sessions_timestamp` (`timestamp`)
-			);
-		</pre>
-
-		<pre>
-			// When sess_match_ip = FALSE
-		  ALTER TABLE ci_sessions ADD PRIMARY KEY (id);
-		</pre>
+	```
+	CREATE TABLE IF NOT EXISTS `ci_sessions` (
+         `id` varchar(128) NOT NULL,
+         `ip_address` varchar(45) NOT NULL,
+         `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
+         `data` blob NOT NULL,
+         KEY `ci_sessions_timestamp` (`timestamp`)
+	);
+	```
+	```
+	// When sess_match_ip = FALSE
+	ALTER TABLE ci_sessions ADD PRIMARY KEY (id);
+	```
 
 7. After running above steps successfully, open the browser and run the below url :
 
