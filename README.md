@@ -16,7 +16,7 @@ Steps for executing :
 
 3. Open the terminal and go to the directory where docker-compose.yml is located and run the below command :
 
-   docker-compose up -d --build
+   		docker-compose up -d --build
 
 4. Step 3 will download the all the dependencies, install it and set up the docker container. After running the command in step 3, it would start two containers. One for MySQL and another for ciapp. It would also create the ciapp database in MySQL.
 
