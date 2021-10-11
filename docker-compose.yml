@@ -2,9 +2,10 @@ version: '3'
 
 services:
   db:
-    image: mysql/mysql-server:latest
-    volumes: 
-      - /path/to/directory/db_data:/var/lib/mysql
+    image: mysql:5.6
+    volumes:
+      - ./scripts/user.sql:/docker-entrypoint-initdb.d/user.sql
+      - ./db_data:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: admin
@@ -15,7 +16,7 @@ services:
   ciapp:
     build: ./ciapp
     volumes: 
-      - /path/to/directory/ciapp:/var/www/html/
+      - ./ciapp:/var/www/html/
     depends_on:
        - db
     restart: always
